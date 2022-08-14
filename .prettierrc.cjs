@@ -1,5 +1,5 @@
 module.exports = {
-  printWidth: 80,
+  printWidth: 100,
   // tabWidth: 2,
   // useTabs: false,
   semi: false, // 未尾逗号, default:  true
@@ -16,5 +16,13 @@ module.exports = {
   proseWrap: 'never',
   // htmlWhitespaceSensitivity: 'css',
   // vueIndentScriptAndStyle: false,  // .vue 缩进
-  endOfLine: 'auto' // default lf
+  endOfLine: 'auto', // default lf
+  overrides: [
+    {
+      files: '*.html',
+      options: {
+        parser: 'html'
+      }
+    }
+  ]
 }
