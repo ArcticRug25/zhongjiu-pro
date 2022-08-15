@@ -52,7 +52,7 @@ header {
   @apply w-screen h-[5rem] flex items-center justify-between px-10;
 
   .logo {
-    @apply text-[#E7E9EC] font-semibold text-2xl;
+    @apply text-[#E7E9EC] font-semibold text-2xl z-20;
   }
 
   :deep(.n-menu-item-content-header) {

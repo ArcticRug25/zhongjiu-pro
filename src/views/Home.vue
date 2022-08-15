@@ -1,11 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HomeBanner from '@/components/HomeBanner/Index.vue'
+</script>
 
 <template>
-  <div>Home</div>
+  <HomeBanner />
 </template>
 
-<style lang="scss" scoped>
-div {
-  @apply h-[125rem];
-}
-</style>
+<style lang="scss" scoped></style>
