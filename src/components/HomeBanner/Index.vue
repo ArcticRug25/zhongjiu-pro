@@ -83,9 +83,9 @@ const bannerList = reactive<BannerItem[]>([
     }
     .banner-btn {
       @apply bg-[#ff434f] text-[#e7e9ec] px-6 py-2 rounded-[.25rem] text-[.825rem] transition-all duration-300;
-      @apply lg:px-8 lg:py-3 lg:text-[1.125rem];
+      @apply lg:px-8 lg:py-3 lg:text-[1.125rem] will-change-auto;
       &:hover {
-        @apply shadow-md shadow-red-500;
+        filter: drop-shadow(0 0 0.3em #ff434f);
       }
     }
   }
