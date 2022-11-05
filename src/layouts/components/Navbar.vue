@@ -1,42 +1,7 @@
 <script setup lang="ts">
-import type { MenuOption } from 'naive-ui'
 import { ref } from 'vue'
-const menuOptions: MenuOption[] = [
-  {
-    label: '首页',
-    key: 'home'
-  },
-  {
-    label: '关于中酒',
-    key: 'dance-dance-dance',
-    children: [
-      {
-        label: '过去增多，未来减少',
-        key: 'the-past-increases-the-future-recedes'
-      },
-      {
-        label: '过去增多，未来减少',
-        key: 'the-past-increases-the-future-recedes'
-      },
-      {
-        label: '过去增多，未来减少',
-        key: 'the-past-increases-the-future-recedes'
-      }
-    ]
-  },
-  {
-    label: '产品展示',
-    key: 'a-wild-sheep-chase'
-  },
-  {
-    label: '公司动态',
-    key: 'a-wild-sheep-chase'
-  },
-  {
-    label: '关注我们',
-    key: 'a-wild-sheep-chase'
-  }
-]
+import { menus } from '@/common/data/menu'
+const menuOptions = menus
 const activeKey = ref<string | null>(null)
 const isOpen = ref<boolean>(false)
 
@@ -56,18 +21,23 @@ const handleBurger = () => {
     </div>
     <div class="open-mask absolute"></div>
   </header>
+  <div class="header-block"></div>
 </template>
 
 <style lang="scss" scoped>
 header {
-  @apply w-screen h-[5rem] flex items-center justify-between px-10;
+  @apply w-screen h-[5.625rem] flex items-center justify-between px-10 bg-[#050505] fixed z-50;
 
   .logo {
-    @apply text-[#E7E9EC] font-semibold text-2xl z-20 transition-all duration-300 ease-in;
+    @apply text-white font-semibold text-2xl z-20 transition-all duration-300 ease-in;
   }
 
   :deep(.n-menu-item-content-header) {
-    @apply text-[#E7E9EC] lg:block hidden #{!important};
+    @apply text-white lg:block hidden #{!important};
+  }
+
+  :deep(.n-menu-item-content) {
+    @apply px-8 #{!important};
   }
 
   .burger {
@@ -118,5 +88,9 @@ header {
       @apply absolute bg-white w-screen h-screen z-10 left-0 top-0;
     }
   }
+}
+
+.header-block {
+  @apply w-screen h-[5.625rem];
 }
 </style>
