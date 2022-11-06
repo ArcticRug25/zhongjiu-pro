@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HomeBanner from '@/components/HomeBanner/Index.vue'
+import HomeBanner from '@/components/HomeBanner/index.vue'
 </script>
 
 <template>

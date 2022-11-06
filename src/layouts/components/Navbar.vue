@@ -11,8 +11,10 @@ const handleBurger = () => {
 </script>
 
 <template>
-  <header :class="{ open: isOpen }">
-    <div class="logo">中酒</div>
+  <header class="layout-header" :class="{ open: isOpen }">
+    <div class="logo">
+      <img src="/src/assets/images/logo-white.png" alt="logo" />
+    </div>
     <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
     <div class="burger lg:hidden" @click="handleBurger">
       <div class="burger-line1"></div>
@@ -21,23 +23,34 @@ const handleBurger = () => {
     </div>
     <div class="open-mask absolute"></div>
   </header>
-  <div class="header-block"></div>
 </template>
 
 <style lang="scss" scoped>
-header {
-  @apply w-screen h-[5.625rem] flex items-center justify-between px-10 bg-[#050505] fixed z-50;
+.layout-header {
+  @apply w-full h-[5.625rem] flex items-center justify-between px-10 bg-[#050505];
 
   .logo {
-    @apply text-white font-semibold text-2xl z-20 transition-all duration-300 ease-in;
+    @apply h-full w-screen flex items-center justify-center z-20;
+    @apply lg:w-[6.25rem] lg:justify-start;
+    img {
+      @apply w-[4.25rem] h-[2.6875rem];
+    }
   }
 
-  :deep(.n-menu-item-content-header) {
-    @apply text-white lg:block hidden #{!important};
-  }
+  /* :deep(.n-menu) {
+    @apply lg:block hidden #{!important};
+  } */
 
-  :deep(.n-menu-item-content) {
-    @apply px-8 #{!important};
+  :deep(.n-menu-item) {
+    @apply lg:block hidden #{!important};
+
+    .n-menu-item-content {
+      @apply px-8 #{!important};
+    }
+
+    .n-menu-item-content-header {
+      @apply text-white;
+    }
   }
 
   .burger {
@@ -88,9 +101,5 @@ header {
       @apply absolute bg-white w-screen h-screen z-10 left-0 top-0;
     }
   }
-}
-
-.header-block {
-  @apply w-screen h-[5.625rem];
 }
 </style>

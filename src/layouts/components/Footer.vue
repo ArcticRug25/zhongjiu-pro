@@ -1,11 +1,15 @@
 <script setup lang="ts"></script>
 
 <template>
-  <footer>
+  <footer class="">
     <ul class="footer-menu">
-      <li></li>
+      <li>1</li>
     </ul>
   </footer>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+footer {
+  @apply w-screen h-[31rem] bg-[#111111];
+}
+</style>

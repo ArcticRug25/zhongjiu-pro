@@ -7,17 +7,15 @@ const { x, y, isScrolling, arrivedState, directions } = useScroll(document)
 </script>
 
 <template>
-  <div>
-    <n-layout>
-      <n-layout-header position="absolute">
+  <div class="w-screen h-screen relative">
+    <n-layout position="absolute">
+      <n-layout-header class="h-[5.625rem] w-screen">
         <Navbar />
       </n-layout-header>
-      <n-layout-content>
+      <n-layout position="absolute" style="top: 5.625rem">
         <slot></slot>
-      </n-layout-content>
-      <n-layout-footer>
         <Footer />
-      </n-layout-footer>
+      </n-layout>
     </n-layout>
   </div>
 </template>
