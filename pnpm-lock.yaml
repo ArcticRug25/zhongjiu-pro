@@ -23,6 +23,7 @@ specifiers:
   unplugin-auto-import: ^0.11.1
   unplugin-vue-components: ^0.22.4
   vite: ^3.0.7
+  vite-plugin-qrcode: ^0.2.0
   vue: ^3.2.37
   vue-router: ^4.1.3
   vue-tsc: ^0.39.5
@@ -54,6 +55,7 @@ devDependencies:
   unplugin-auto-import: 0.11.1_gvfhqaq4iriax5zs7grzec6lkm
   unplugin-vue-components: 0.22.4_vite@3.0.7+vue@3.2.37
   vite: 3.0.7_sass@1.54.4
+  vite-plugin-qrcode: 0.2.0_vite@3.0.7
   vue-tsc: 0.39.5_typescript@4.7.4
 
 packages:
@@ -2770,6 +2772,11 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
+  /qrcode-terminal/0.12.0:
+    resolution: {integrity: sha512-EXtzRZmC+YGmGlDFbXKxQiMZNwCLEO6BANKXG4iCtSIM0yqc/pappSx3RIKr4r0uh5JsBckOXeKrB3Iz7mdQpQ==}
+    hasBin: true
+    dev: true
+
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
@@ -3317,6 +3324,16 @@ packages:
     dependencies:
       evtd: 0.2.4
       vue: 3.2.37
+    dev: true
+
+  /vite-plugin-qrcode/0.2.0_vite@3.0.7:
+    resolution: {integrity: sha512-R+0gK9BbYjxLXc9rQd3Y+6EME9QK/HMYdDd28+PZ+qisqS8/yhmZJuFshk+RmA9fP2YYu8u2yS5u+TvbsY5PFw==}
+    engines: {node: ^14.13.1 || ^16.0.0 || >=18}
+    peerDependencies:
+      vite: ^3.0.0
+    dependencies:
+      qrcode-terminal: 0.12.0
+      vite: 3.0.7_sass@1.54.4
     dev: true
 
   /vite/3.0.7_sass@1.54.4:

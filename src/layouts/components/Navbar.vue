@@ -27,19 +27,16 @@ const handleBurger = () => {
 
 <style lang="scss" scoped>
 .layout-header {
-  @apply w-full h-[5.625rem] flex items-center justify-between px-10 bg-[#050505];
+  @apply w-full h-full flex items-center justify-between px-10 bg-[#050505];
 
   .logo {
     @apply h-full w-screen flex items-center justify-center z-20;
     @apply lg:w-[6.25rem] lg:justify-start;
     img {
-      @apply w-[4.25rem] h-[2.6875rem];
+      @apply w-[2.75rem] h-[1.75rem];
+      @apply lg:w-[4.25rem] lg:h-[2.6875rem];
     }
   }
-
-  /* :deep(.n-menu) {
-    @apply lg:block hidden #{!important};
-  } */
 
   :deep(.n-menu-item) {
     @apply lg:block hidden #{!important};
