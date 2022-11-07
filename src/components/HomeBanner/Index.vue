@@ -101,7 +101,7 @@ const isPc = vaildatePc()
       @apply lg:px-[8.75rem] lg:top-[2.5rem];
 
       .banner-title {
-        @apply flex-1 flex top-1 justify-center cursor-pointer text-xs;
+        @apply flex-1 flex top-1 justify-center cursor-pointer text-xs font-light;
         @apply lg:text-xl;
       }
     }
