@@ -27,7 +27,7 @@ const handleBurger = () => {
 
 <style lang="scss" scoped>
 .layout-header {
-  @apply w-full h-full flex items-center justify-between px-10 bg-[#050505];
+  @apply w-full h-full flex items-center justify-between px-10 bg-white text-black;
 
   .logo {
     @apply h-full w-screen flex items-center justify-center z-20;
@@ -46,7 +46,7 @@ const handleBurger = () => {
     }
 
     .n-menu-item-content-header {
-      @apply text-white;
+      @apply text-black;
     }
   }
 
@@ -56,7 +56,7 @@ const handleBurger = () => {
     .burger-line1,
     .burger-line2,
     .burger-line3 {
-      @apply w-[20px] h-[2px] bg-[#e7e9ec] transition-all duration-300 ease-in;
+      @apply w-[20px] h-[2px] bg-black transition-all duration-300 ease-in;
     }
 
     .burger-line1 {
