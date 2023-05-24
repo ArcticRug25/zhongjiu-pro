@@ -10,19 +10,19 @@ interface BannerItem {
 }
 const productList = reactive<BannerItem[]>([
   {
-    imgUrl: '/src/assets/images/home-product.png',
+    imgUrl: 'https://www.gzzjc.cn/static/cn/images/33.jpg',
     phoneImgUrl: '/src/assets/images/ba84930541213be822180655651ddd40.jpeg',
     id: 0,
     title: '中酒 · 荣耀1921'
   },
   {
-    imgUrl: '/src/assets/images/home-product.png',
+    imgUrl: 'https://www.gzzjc.cn/static/cn/images/11.jpg',
     phoneImgUrl: '/src/assets/images/ba84930541213be822180655651ddd40.jpeg',
     id: 1,
     title: '中酒 · 大师级'
   },
   {
-    imgUrl: '/src/assets/images/home-product.png',
+    imgUrl: 'https://www.gzzjc.cn/upload/images/zj.png',
     phoneImgUrl: '/src/assets/images/ba84930541213be822180655651ddd40.jpeg',
     id: 2,
     title: '中酒 · 国香'
@@ -101,7 +101,8 @@ const isPc = vaildatePc()
 
 <style lang="scss" scoped>
 .home-product-container {
-  @apply w-[100vw] h-[33.75rem] relative box-border py-[3.75rem];
+  @apply w-[100vw] h-[21.25rem] relative box-border py-[3.75rem];
+  @apply lg:h-[33.75rem];
   .home-product {
     @apply w-[86vw] h-full box-border relative flex items-center mx-auto;
     .home-product-carousel {
@@ -112,7 +113,7 @@ const isPc = vaildatePc()
       }
 
       :deep(.n-carousel__slide) {
-        @apply flex items-center;
+        @apply flex items-center justify-center;
       }
 
       :deep(.n-carousel__slide--current) {
@@ -132,7 +133,7 @@ const isPc = vaildatePc()
     }
 
     .home-product-name-carousel {
-      @apply absolute bottom-0 h-[2.25rem] w-full;
+      @apply absolute -bottom-8 h-[2.25rem] w-full;
       .product-name {
         @apply flex justify-center text-[#333] text-[18px] font-[700];
       }

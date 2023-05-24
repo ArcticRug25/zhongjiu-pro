@@ -21,7 +21,15 @@ const handleBurger = () => {
       <div class="burger-line2"></div>
       <div class="burger-line3"></div>
     </div>
-    <div class="open-mask absolute"></div>
+    <div class="open-mask absolute">
+      <nav>
+        <div>首页</div>
+        <div>关于中酒</div>
+        <div>产品展示</div>
+        <div>公司动态</div>
+        <div>关注我们</div>
+      </nav>
+    </div>
   </header>
 </template>
 
@@ -67,6 +75,11 @@ const handleBurger = () => {
       @apply absolute top-[6px];
     }
   }
+
+  nav {
+    @apply hidden;
+  }
+
   &.open {
     .burger {
       @apply block;
@@ -96,7 +109,45 @@ const handleBurger = () => {
 
     .open-mask {
       @apply absolute bg-white w-screen h-screen z-10 left-0 top-0;
+      /* 下滑效果 */
+      animation: slideDown 0.6s ease-out forwards;
+
+      nav {
+        @apply block mr-[1.5rem] text-right;
+        * {
+          margin: 4px 0;
+          cursor: pointer;
+          font-size: 18px;
+          color: var(--text-color-darker);
+          opacity: 0;
+          animation: showMenu 0.5s linear forwards 0.4s;
+        }
+      }
     }
+  }
+}
+
+/* 导航下滑动画 */
+@keyframes slideDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 100vh;
+    padding-top: 80px;
+    opacity: 1;
+  }
+}
+
+/* 菜单项动画 */
+@keyframes showMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-1vh);
+  }
+  to {
+    opacity: 1;
   }
 }
 </style>
