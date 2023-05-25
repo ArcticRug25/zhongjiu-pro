@@ -1,12 +1,38 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { menus } from '@/common/data/menu'
+import router from '@/router'
 const menuOptions = menus
 const activeKey = ref<string | null>(null)
 const isOpen = ref<boolean>(false)
 
 const handleBurger = () => {
   isOpen.value = !isOpen.value
+}
+
+// 路由跳转
+const handleRoute = (key: string) => {
+  activeKey.value = key
+  isOpen.value = false
+  switch (key) {
+    case 'home':
+      router.push({ path: '/' })
+      break
+    case 'about':
+      router.push({ path: '/about' })
+      break
+    case 'product':
+      router.push({ path: '/product' })
+      break
+    case 'news':
+      router.push({ path: '/news' })
+      break
+    case 'contact':
+      router.push({ path: '/contact' })
+      break
+    default:
+      break
+  }
 }
 </script>
 
@@ -15,7 +41,7 @@ const handleBurger = () => {
     <div class="logo">
       <img src="/src/assets/images/logo-white.png" alt="logo" />
     </div>
-    <n-menu v-model:value="activeKey" mode="horizontal" :options="menuOptions" />
+    <n-menu v-model:value="activeKey" color="#c59d4a" mode="horizontal" :options="menuOptions" />
     <div class="burger lg:hidden" @click="handleBurger">
       <div class="burger-line1"></div>
       <div class="burger-line2"></div>
@@ -23,8 +49,8 @@ const handleBurger = () => {
     </div>
     <div class="open-mask absolute">
       <nav>
-        <div>首页</div>
-        <div>关于中酒</div>
+        <div @click="handleRoute('home')">首页</div>
+        <div @click="handleRoute('about')">关于中酒</div>
         <div>产品展示</div>
         <div>公司动态</div>
         <div>关注我们</div>

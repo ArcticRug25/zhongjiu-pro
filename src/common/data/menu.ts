@@ -1,12 +1,32 @@
 import type { MenuOption } from 'naive-ui'
+import { h } from 'vue'
+import { RouterLink } from 'vue-router'
 
 export const menus: MenuOption[] = [
   {
-    label: '首页',
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'home'
+          }
+        },
+        { default: () => '首页' }
+      ),
     key: 'home'
   },
   {
-    label: '关于中酒',
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'about'
+          }
+        },
+        { default: () => '关于中酒' }
+      ),
     key: 'about'
   },
   {

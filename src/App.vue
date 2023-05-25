@@ -5,10 +5,9 @@ import MainLayout from './layouts/MainLayout.vue'
 
 const themeOverrides: GlobalThemeOverrides = {
   common: {
-    // primaryColor: '#FF434F'
-  },
-  Button: {
-    textColor: '#E7E9EC'
+    primaryColor: '#c59d4a',
+    textColorBase: '#c59d4a',
+    primaryColorHover: '#c59d4a'
   }
 }
 </script>

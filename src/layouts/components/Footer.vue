@@ -1,4 +1,28 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import router from '@/router'
+
+const handleRoute = (key: string) => {
+  switch (key) {
+    case 'home':
+      router.push({ path: '/' })
+      break
+    case 'about':
+      router.push({ path: '/about' })
+      break
+    case 'product':
+      router.push({ path: '/product' })
+      break
+    case 'news':
+      router.push({ path: '/news' })
+      break
+    case 'contact':
+      router.push({ path: '/contact' })
+      break
+    default:
+      break
+  }
+}
+</script>
 
 <template>
   <footer>
@@ -7,11 +31,11 @@
         <img src="@/assets/images/zhongjiu-white.png" alt="" />
       </div>
       <ul class="footer-menu">
-        <li>首页</li>
-        <li>关于中酒</li>
-        <li>产品展示</li>
-        <li>公司动态</li>
-        <li>关注我们</li>
+        <li @click="handleRoute('home')">首页</li>
+        <li @click="handleRoute('about')">关于中酒</li>
+        <li @click="handleRoute('')">产品展示</li>
+        <li @click="handleRoute('')">公司动态</li>
+        <li @click="handleRoute('')">关注我们</li>
       </ul>
     </div>
     <div class="divide"></div>
