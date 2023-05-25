@@ -39,7 +39,7 @@ const handleRoute = (key: string) => {
 <template>
   <header class="layout-header" :class="{ open: isOpen }">
     <div class="logo">
-      <img src="/src/assets/images/logo-white.png" alt="logo" />
+      <img src="/src/assets/images/logo1.png" alt="logo" />
     </div>
     <n-menu v-model:value="activeKey" color="#c59d4a" mode="horizontal" :options="menuOptions" />
     <div class="burger lg:hidden" @click="handleBurger">
@@ -51,9 +51,9 @@ const handleRoute = (key: string) => {
       <nav>
         <div @click="handleRoute('home')">首页</div>
         <div @click="handleRoute('about')">关于中酒</div>
-        <div>产品展示</div>
-        <div>公司动态</div>
-        <div>关注我们</div>
+        <div @click="handleRoute('product')">产品展示</div>
+        <div @click="handleRoute('news')">公司动态</div>
+        <div @click="handleRoute('contact')">关注我们</div>
       </nav>
     </div>
   </header>
@@ -61,7 +61,7 @@ const handleRoute = (key: string) => {
 
 <style lang="scss" scoped>
 .layout-header {
-  @apply w-full h-full flex items-center justify-between px-10 bg-white text-black;
+  @apply w-full h-full flex items-center justify-between px-10 bg-white text-black border-b border-[#F9F9F9];
 
   .logo {
     @apply h-full w-screen flex items-center justify-center z-20;
@@ -90,7 +90,7 @@ const handleRoute = (key: string) => {
     .burger-line1,
     .burger-line2,
     .burger-line3 {
-      @apply w-[20px] h-[2px] bg-black transition-all duration-300 ease-in;
+      @apply w-[20px] h-[2px] bg-[#EDCE9B] transition-all duration-300 ease-in;
     }
 
     .burger-line1 {
@@ -114,7 +114,7 @@ const handleRoute = (key: string) => {
     .burger-line1,
     .burger-line2,
     .burger-line3 {
-      @apply bg-[#2e2e2e];
+      @apply bg-[#EDCE9B];
     }
 
     .burger-line1 {

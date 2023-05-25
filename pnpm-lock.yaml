@@ -49,8 +49,8 @@ devDependencies:
     specifier: ^9.3.0
     version: 9.3.0(eslint@8.22.0)
   naive-ui:
-    specifier: ^2.32.1
-    version: 2.32.1(vue@3.2.37)
+    specifier: ^2.34.4
+    version: 2.34.4(vue@3.2.37)
   postcss:
     specifier: ^8.4.16
     version: 8.4.16
@@ -64,7 +64,7 @@ devDependencies:
     specifier: ^3.1.8
     version: 3.1.8(postcss@8.4.16)
   typescript:
-    specifier: ^4.6.4
+    specifier: ^4.7.4
     version: 4.7.4
   unplugin-auto-import:
     specifier: ^0.11.1
@@ -293,8 +293,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@juggle/resize-observer@3.3.1:
-    resolution: {integrity: sha512-zMM9Ds+SawiUkakS7y94Ymqx+S0ORzpG3frZirN3l+UlXUmSUR7hF4wxCVqW+ei94JzV5kt0uXBcoOEAuiydrw==}
+  /@juggle/resize-observer@3.4.0:
+    resolution: {integrity: sha512-dfLbk+PwWvFzSxwk3n5ySL0hfBog779o8h68wK/7/APo/7cgyWp5jcXockbxdk5kFRkbeXWm4Fbi9FrdN381sA==}
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -332,6 +332,10 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/katex@0.14.0:
+    resolution: {integrity: sha512-+2FW2CcT0K3P+JMR8YG846bmDwplKUTsWgT2ENwdQ1UdVfRk3GQrh6Mi4sTopy30gI8Uau5CEqHTDZ6YvWIUPA==}
     dev: true
 
   /@types/lodash-es@4.17.6:
@@ -785,7 +789,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.3
-      caniuse-lite: 1.0.30001375
+      caniuse-lite: 1.0.30001489
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -831,7 +835,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001375
+      caniuse-lite: 1.0.30001489
       electron-to-chromium: 1.4.219
       node-releases: 2.0.6
       update-browserslist-db: 1.0.5(browserslist@4.21.3)
@@ -865,8 +869,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /caniuse-lite@1.0.30001375:
-    resolution: {integrity: sha512-kWIMkNzLYxSvnjy0hL8w1NOaWNr2rn39RTAVyIwcw8juu60bZDWiF1/loOYANzjtJmy6qPgNmn38ro5Pygagdw==}
+  /caniuse-lite@1.0.30001489:
+    resolution: {integrity: sha512-x1mgZEXK8jHIfAxm+xgdpHpk50IN3z3q3zP261/WS+uvePxW8izXuCu6AHz0lkuYTlATDehiZ/tNyYBdSQsOUQ==}
     dev: true
 
   /chalk@2.4.2:
@@ -2419,13 +2423,14 @@ packages:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
     dev: true
 
-  /naive-ui@2.32.1(vue@3.2.37):
-    resolution: {integrity: sha512-4zRHAn9d273qKWHs2ZQ+9xZmGTfxhL/CI1tj8bJkE313zjwyGRaiPbCeh3hQgrNdZWiRXdqmA442EVKHizGWeg==}
+  /naive-ui@2.34.4(vue@3.2.37):
+    resolution: {integrity: sha512-aPG8PDfhSzIzn/jSC9y3Jb3Pe2wHJ7F0cFV1EWlbImSrZECeUmoc+fIcOSWbizoztkKfaUAeKwYdMl09MKkj1g==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
       '@css-render/plugin-bem': 0.15.10(css-render@0.15.10)
       '@css-render/vue3-ssr': 0.15.10(vue@3.2.37)
+      '@types/katex': 0.14.0
       '@types/lodash': 4.14.182
       '@types/lodash-es': 4.17.6
       async-validator: 4.2.5
@@ -2441,7 +2446,7 @@ packages:
       vdirs: 0.1.8(vue@3.2.37)
       vooks: 0.2.12(vue@3.2.37)
       vue: 3.2.37
-      vueuc: 0.4.48(vue@3.2.37)
+      vueuc: 0.4.51(vue@3.2.37)
     dev: true
 
   /nanoid@3.3.4:
@@ -3458,13 +3463,13 @@ packages:
       '@vue/server-renderer': 3.2.37(vue@3.2.37)
       '@vue/shared': 3.2.37
 
-  /vueuc@0.4.48(vue@3.2.37):
-    resolution: {integrity: sha512-dQTBLxCzfaPuzD3c4/dIxAULtnyY+xwdotCRFUDgf0DJiwuR3tI+txJ9K8uJKmaHwc1JDUVqhRAj9Jd/pvInWg==}
+  /vueuc@0.4.51(vue@3.2.37):
+    resolution: {integrity: sha512-pLiMChM4f+W8czlIClGvGBYo656lc2Y0/mXFSCydcSmnCR1izlKPGMgiYBGjbY9FDkFG8a2HEVz7t0DNzBWbDw==}
     peerDependencies:
       vue: ^3.0.11
     dependencies:
       '@css-render/vue3-ssr': 0.15.10(vue@3.2.37)
-      '@juggle/resize-observer': 3.3.1
+      '@juggle/resize-observer': 3.4.0
       css-render: 0.15.10
       evtd: 0.2.4
       seemly: 0.3.6

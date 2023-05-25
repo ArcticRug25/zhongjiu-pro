@@ -33,9 +33,9 @@ const handleRoute = (key: string) => {
       <ul class="footer-menu">
         <li @click="handleRoute('home')">首页</li>
         <li @click="handleRoute('about')">关于中酒</li>
-        <li @click="handleRoute('')">产品展示</li>
-        <li @click="handleRoute('')">公司动态</li>
-        <li @click="handleRoute('')">关注我们</li>
+        <li @click="handleRoute('product')">产品展示</li>
+        <li @click="handleRoute('news')">公司动态</li>
+        <li @click="handleRoute('contact')">关注我们</li>
       </ul>
     </div>
     <div class="divide"></div>

@@ -30,15 +30,42 @@ export const menus: MenuOption[] = [
     key: 'about'
   },
   {
-    label: '产品展示',
-    key: 'products'
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'product'
+          }
+        },
+        { default: () => '产品展示' }
+      ),
+    key: 'product'
   },
   {
-    label: '公司动态',
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'news'
+          }
+        },
+        { default: () => '公司动态' }
+      ),
     key: 'news'
   },
   {
-    label: '关注我们',
-    key: 'attention'
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'contact'
+          }
+        },
+        { default: () => '关注我们' }
+      ),
+    key: 'contact'
   }
 ]
