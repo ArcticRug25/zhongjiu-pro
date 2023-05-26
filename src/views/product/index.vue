@@ -20,7 +20,7 @@ const isPc = vaildatePc()
     animated
   >
     <n-tab-pane name="中酒初心" tab="中酒初心"> <Product /> </n-tab-pane>
-    <n-tab-pane name="the beatles" tab="the Beatles"> Hey Jude </n-tab-pane>
+    <n-tab-pane name="中酒初心2" tab="中酒初心2"> <Product /> </n-tab-pane>
   </n-tabs>
   <n-tabs v-else type="line" tab-style="min-width: 120px" class="product-tabs mobile">
     <n-tab-pane name="chap1" tab="中酒 · 初心">
@@ -43,8 +43,6 @@ const isPc = vaildatePc()
 
 <style lang="scss" scoped>
 .product-tabs {
-  @apply h-[100%];
-
   &.pc {
     :deep(.n-tabs-nav-scroll-content) {
       @apply h-full w-[200px];

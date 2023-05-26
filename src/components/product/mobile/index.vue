@@ -51,7 +51,7 @@
 
 <style lang="scss" scoped>
 .product {
-  @apply flex flex-col justify-evenly box-border px-[5%];
+  @apply flex flex-col justify-evenly box-border px-[5%] overflow-hidden;
   .product-name {
     @apply text-[25px] text-[#1d1d1e] font-bold text-center;
   }

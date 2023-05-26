@@ -1,6 +1,18 @@
 <script setup lang="ts">
-import Footer from './components/Footer.vue'
+import { useRouter } from 'vue-router'
+import { ref, watch } from 'vue'
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
+
+// 监听路由变化滚动到顶部
+const router = useRouter()
+const mainLayoutRef = ref(null) as any
+watch(
+  () => router.currentRoute.value,
+  () => {
+    mainLayoutRef.value?.scrollTo(0, 0)
+  }
+)
 </script>
 
 <template>
@@ -9,7 +21,7 @@ import Navbar from './components/Navbar.vue'
       <n-layout-header class="lg:h-[5.625rem] h-14 w-screen">
         <Navbar />
       </n-layout-header>
-      <n-layout position="absolute" class="layout-content">
+      <n-layout ref="mainLayoutRef" position="absolute" class="layout-content">
         <slot></slot>
         <Footer />
       </n-layout>
